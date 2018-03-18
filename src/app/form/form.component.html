@@ -10,6 +10,7 @@
         name="item" 
         class="form-input"
     />
+    <p *ngIf="validationMessage" class="form-validation">{{ validationMessage }}</p>
     <button 
         type="submit" 
         (click)="handleAdd(item)"

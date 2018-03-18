@@ -11,6 +11,18 @@ export class FormComponent {
 
     handleAdd(item){
         event.preventDefault()
-        this.add.emit(item.value)
+        if (item.value.length < 1) {
+            this.validationMessage = "A value is required"; 
+        }
+        else if (item.value.length > 12) {
+            this.validationMessage = "12 character limit"; 
+        }
+        else {
+            this.add.emit(item.value); 
+            item.value = ""; 
+            this.validationMessage = null; 
+        }
     }
+
+    validationMessage = null; 
 }
