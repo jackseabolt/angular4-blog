@@ -4,7 +4,7 @@
 
 Why TaskTracker
 -------------
-Everyone needs a way to stay organized. Try TaskTrack! Create a list of items you want to complete. Check them off as each task is completed. 
+Everyone needs a way to stay organized. Try TaskTracker! Create a list of items you want to complete. Check them off as each task is completed. 
 
 For local use
 --------
