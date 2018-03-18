@@ -1,0 +1,18 @@
+
+<div class="g-item-title">
+        <h3 class="g-title">Add Task</h3>
+</div>
+<div class="g-item">
+    <input 
+        ngModel 
+        #item 
+        placeholder="New Item" 
+        name="item" 
+        class="form-input"
+    />
+    <button 
+        type="submit" 
+        (click)="handleAdd(item)"
+        class="form-button"    
+    >Add</button>
+</div>

@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  items = [{
+  
+  unchecked: any = [{
     value: 'Example 1', 
     checked: false
   },
@@ -19,16 +20,29 @@ export class AppComponent {
     checked: false
   }];
 
+  checked: any = [{
+    value: 'Example 4', 
+    checked: true
+  }];
+
   handleDelete($event) {
-    this.items = this.items.filter(item => {
+    this.unchecked = this.unchecked.filter(item => {
       return item.value !== $event 
     })
   }
 
+  handleAdd($event) {
+    let newItems = this.unchecked.concat([{
+      value: $event, 
+      checked: false
+    }])
+    return this.unchecked = newItems
+  }
+
   handleCheck($event) {
-    this.items = this.items.map(item => {
+    this.unchecked = this.unchecked.map(item => {
       if (item.value === $event) {
-        item.checked = true
+        item.checked = !item.checked
         return item; 
       }
       return item

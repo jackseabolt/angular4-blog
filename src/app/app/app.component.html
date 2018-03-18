@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="app">
+  <section class="g-column"> 
+    <form (add)="handleAdd($event)"></form>
+  </section>
+  <section class="g-column"> 
+      <div class="g-item-title">
+          <h3 class="g-title">Tasks</h3>
+      </div>
+      <div *ngFor="let item of unchecked">
+        <post 
+          [item]="item" 
+          (delete)="handleDelete($event)"
+          (check)="handleCheck($event)"
+          ></post>
+      </div>
+  </section>
+  <section class="g-column"> 
+      <div class="g-item-title">
+          <h3 class="g-title">Completed</h3>
+      </div>
+  </section>
+</div>

@@ -2,7 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     templateUrl: './post.component.html', 
-    selector: 'post'
+    selector: 'post', 
+    styleUrls: ['./post.component.css']
 })
 
 export class PostComponent {

@@ -1,0 +1,17 @@
+.app { 
+    display: flex; 
+    align-items: top; 
+    padding: 120px 50px; 
+}
+
+@media screen and (max-width: 1200px) {
+    .app { 
+        display:block; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .app { 
+        padding: 120px 00px; 
+    }
+}

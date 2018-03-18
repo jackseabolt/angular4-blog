@@ -1,4 +1,11 @@
- <p>{{ item.value }}</p> 
- <p>{{ item.checked }}</p>
-<button (click)="onDelete()">Delete</button>
-<button (click)="onCheck()">Check</button>
+ 
+<section class="post-post">
+    <p class="g-text">{{ item.value }}</p> 
+    <p class="g-text">{{ item.checked }}</p>
+    <div (click)="onDelete()" class="g-graphic-button">
+        <i class="fas fa-times"></i>
+    </div>
+    <div (click)="onCheck()" class="g-graphic-button">
+        <i class="fas fa-check"></i>
+    </div>
+</section>
