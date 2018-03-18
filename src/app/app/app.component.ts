@@ -28,7 +28,10 @@ export class AppComponent {
   handleDelete($event) {
     this.unchecked = this.unchecked.filter(item => {
       return item.value !== $event 
-    })
+    });
+    this.checked = this.checked.filter(item => {
+      return item.value !== $event 
+    });
   }
 
   handleAdd($event) {
@@ -40,12 +43,12 @@ export class AppComponent {
   }
 
   handleCheck($event) {
-    this.unchecked = this.unchecked.map(item => {
-      if (item.value === $event) {
-        item.checked = !item.checked
-        return item; 
-      }
-      return item
+    this.unchecked = this.unchecked.filter(item => {
+      return item.value !== $event 
     })
+    this.checked = this.checked.concat([{
+      value: $event, 
+      checked: true
+    }])
   }
 }

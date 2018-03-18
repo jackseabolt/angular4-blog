@@ -4,14 +4,15 @@ import { PostComponent } from './post/post.component'
 import { AppComponent } from './app/app.component';
 import { FormComponent } from './form/form.component';
 import { HeaderComponent } from './header/header.component';
-
+import { CheckedComponent } from './checked/checked.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     PostComponent, 
     FormComponent, 
-    HeaderComponent
+    HeaderComponent,
+    CheckedComponent
   ],
   imports: [
     BrowserModule
