@@ -9,7 +9,7 @@
         <div class="g-item-title">
             <h3 class="g-title">Tasks</h3>
         </div>
-        <div *ngFor="let item of unchecked">
+        <div *ngFor="let item of unchecked" @fade>
           <post 
             [item]="item" 
             (delete)="handleDelete($event)"
@@ -21,11 +21,11 @@
         <div class="g-item-title">
             <h3 class="g-title">Completed</h3>
         </div>
-        <div *ngFor="let item of checked">
-            <checked 
-              [item]="item" 
-              (delete)="handleDelete($event)"
-              ></checked>
+        <div *ngFor="let item of checked" @fade>
+            <checked   
+                [item]="item" 
+                (delete)="handleDelete($event)"
+            ></checked>
           </div>
     </section>
   </div>

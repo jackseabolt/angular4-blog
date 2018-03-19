@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core';
 import { PostComponent } from './post/post.component'
 import { AppComponent } from './app/app.component';
@@ -15,7 +16,8 @@ import { CheckedComponent } from './checked/checked.component';
     CheckedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
